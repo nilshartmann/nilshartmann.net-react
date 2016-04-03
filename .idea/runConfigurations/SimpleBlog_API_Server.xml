@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SimpleBlog API Server" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="$PATH$/node" path-to-js-file="server/index.js" application-parameters="--public-host localhost --public-port 7777 --host localhost --port 7777 --cors true --post-dir ./content/ --enableWriteAccess" working-dir="$PROJECT_DIR$">
+    <method />
+  </configuration>
+</component>

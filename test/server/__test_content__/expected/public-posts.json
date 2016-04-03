@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Fünf Gründe für React",
+    "slug": "fuenf-gruende-fuer-react",
+    "publish_time": "2015-08-11T22:00:00.000Z",
+    "image": "",
+    "image_position": "before_summary",
+    "image_expanded": true,
+    "summary": "React ist ein JavaScript-Framework für die Entwicklung von UI-Komponenten. *Fünf Gründe*",
+    "content": "*Dieser Artikel ist ursprünglich auf [JAXenter](https://jaxenter.de/5-gruende-sich-das-javascript-framework-react-genauer-anzuschauen-24769) erschienen.",
+    "tags": [
+      "JavaScript",
+      "React"
+    ],
+    "published": true,
+    "_summaryHtml": "<p>React ist ein JavaScript-Framework für die Entwicklung von UI-Komponenten. <em>Fünf Gründe</em></p>\n",
+    "_contentHtml": "<p>*Dieser Artikel ist ursprünglich auf <a href=\"https://jaxenter.de/5-gruende-sich-das-javascript-framework-react-genauer-anzuschauen-24769\">JAXenter</a> erschienen.</p>\n",
+    "_date": "12.8.2015"
+  },
+  {
+    "slug": "sonnenuntergang",
+    "alias": "2013/08/21/sonnenuntergang",
+    "publish_time": "2013-08-21T20:30:15.000Z",
+    "title": "Sonnenuntergang",
+    "image": "/uploads/20130820-130820-035.jpg",
+    "image_position": "skip",
+    "summary": "Neuer Versuch",
+    "content": "Zwar zeigte sich die Sonne",
+    "tags": [
+      "Fotografie",
+      "Sonnenuntergang"
+    ],
+    "_summaryHtml": "<p>Neuer Versuch</p>\n",
+    "_contentHtml": "<p>Zwar zeigte sich die Sonne</p>\n",
+    "_date": "21.8.2013",
+    "published": true
+  },
+  {
+    "slug": "osgi-by-example",
+    "alias": "2009/06/27/osgi-by-example",
+    "publish_time": "2009-06-27T18:26:14.000Z",
+    "title": "OSGi by Example",
+    "summary": "Am 25. Juni \"OSGi by Example\"",
+    "content": "Für die Beispiele des Talks **haben wir** unseren grafischen Log-Viewer Sherlog verwendet.",
+    "tags": [
+      "Artikel und Vorträge",
+      "OSGi",
+      "Softwareentwicklung"
+    ],
+    "_summaryHtml": "<p>Am 25. Juni &quot;OSGi by Example&quot;</p>\n",
+    "_contentHtml": "<p>Für die Beispiele des Talks <strong>haben wir</strong> unseren grafischen Log-Viewer Sherlog verwendet.</p>\n",
+    "_date": "27.6.2009",
+    "published": true
+  }
+]

@@ -1,0 +1,64 @@
+.Spacer {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.Left {
+  float: left;
+}
+
+.Right {
+  float: right;
+}
+
+.Center {
+  text-align: center;
+}
+
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+/**
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    contenteditable attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that are clearfixed.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+.Clearfix:before,
+.Clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.Clearfix:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.Clearfix {
+  *zoom: 1;
+}
+
+// http://www.codechewing.com/library/create-sass-mixin-for-styling-placeholders-css/
+@mixin placeholder {
+  &::-moz-placeholder {
+    @content
+  }
+  &::-webkit-input-placeholder {
+    @content
+  }
+  &:-ms-input-placeholder {
+    @content
+  }
+}
+
+@mixin userselect($us) {
+  user-select: $us;
+  -webkit-user-select: $us;
+  -moz-user-select: $us;
+  -ms-user-select: $us;
+}

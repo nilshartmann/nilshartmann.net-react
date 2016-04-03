@@ -1,0 +1,12 @@
+{
+  "title": "Fünf Gründe für React",
+  "slug": "fuenf-gruende-fuer-react",
+  "publish_time":"2015-08-11T22:00:00.000Z",
+  "image": "",
+  "image_position": "before_summary",
+  "image_expanded": true,
+  "summary": "React ist ein JavaScript-Framework für die Entwicklung von UI-Komponenten. *Fünf Gründe*",
+  "content": "*Dieser Artikel ist ursprünglich auf [JAXenter](https://jaxenter.de/5-gruende-sich-das-javascript-framework-react-genauer-anzuschauen-24769) erschienen.*\n\nDas React Framework wurde 2013 von Facebook als Open-Source-Lösung zur Verfügung gestellt und erfreut sich seitdem zunehmender Beliebtheit unter Web-Entwicklern. So gibt es schon eine ganze Reihe namhafter Webseiten, die React bereits im produktiven Einsatz haben. Neben Facebooks eigenen Anwendungen sowie Instagram kommt das Framework beispielsweise auf der Website des Wall Street Journals, des Foto-Dienstes Smugmug oder auch bei Airbnb zum Einsatz.\n\n",
+  "tags": ["JavaScript", "React"],
+  "published": false
+}

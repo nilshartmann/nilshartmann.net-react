@@ -1,0 +1,12 @@
+{
+  "title": "Fünf Gründe für React",
+  "slug": "fuenf-gruende-fuer-react",
+  "publish_time":"2015-08-11T22:00:00.000Z",
+  "image": "",
+  "image_position": "before_summary",
+  "image_expanded": true,
+  "summary": "React ist ein JavaScript-Framework für die Entwicklung von UI-Komponenten. *Fünf Gründe*",
+  "content": "*Dieser Artikel ist ursprünglich auf [JAXenter](https://jaxenter.de/5-gruende-sich-das-javascript-framework-react-genauer-anzuschauen-24769) erschienen.",
+  "tags": ["JavaScript", "React"],
+  "published": true
+}

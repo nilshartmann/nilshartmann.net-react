@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Folien \"Mit React Komponenten entwicklen\" - Talk auf der W-Jax 2015",
+    "slug": "folien-mit-react-komponenten-entwicklen-talk-auf-der-w-jax-2015",
+    "image": "/uploads/mit_react_komponenten_entwickeln.png",
+    "image_position": "before_summary",
+    "image_expanded": true,
+    "summary": "Auf der W-Jax 2015 in München habe ich eine Einführung in React gegeben.\nDie Folien des Vortrags könnt ihr hier herunterladen",
+    "content": "* [Mit React UI-Komponenten entwickeln (PDF)](/uploads/mit_react_komponenten_entwickeln.pdf)",
+    "tags": [],
+    "published": false,
+    "publish_time": "2015-11-04T23:00:00.000Z",
+    "_summaryHtml": "<p>Auf der W-Jax 2015 in München habe ich eine Einführung in React gegeben.\nDie Folien des Vortrags könnt ihr hier herunterladen</p>\n",
+    "_contentHtml": "<ul>\n<li><a href=\"/uploads/mit_react_komponenten_entwickeln.pdf\">Mit React UI-Komponenten entwickeln (PDF)</a></li>\n</ul>\n",
+    "_date": "5.11.2015"
+  },
+  {
+    "title": "Fünf Gründe für React",
+    "slug": "fuenf-gruende-fuer-react",
+    "publish_time": "2015-08-11T22:00:00.000Z",
+    "image": "",
+    "image_position": "before_summary",
+    "image_expanded": true,
+    "summary": "React ist ein JavaScript-Framework für die Entwicklung von UI-Komponenten. *Fünf Gründe*",
+    "content": "*Dieser Artikel ist ursprünglich auf [JAXenter](https://jaxenter.de/5-gruende-sich-das-javascript-framework-react-genauer-anzuschauen-24769) erschienen.*\n\nDas React Framework wurde 2013 von Facebook als Open-Source-Lösung zur Verfügung gestellt und erfreut sich seitdem zunehmender Beliebtheit unter Web-Entwicklern. So gibt es schon eine ganze Reihe namhafter Webseiten, die React bereits im produktiven Einsatz haben. Neben Facebooks eigenen Anwendungen sowie Instagram kommt das Framework beispielsweise auf der Website des Wall Street Journals, des Foto-Dienstes Smugmug oder auch bei Airbnb zum Einsatz.\n\n",
+    "tags": [
+      "JavaScript",
+      "React"
+    ],
+    "published": false,
+    "_summaryHtml": "<p>React ist ein JavaScript-Framework für die Entwicklung von UI-Komponenten. <em>Fünf Gründe</em></p>\n",
+    "_contentHtml": "<p><em>Dieser Artikel ist ursprünglich auf <a href=\"https://jaxenter.de/5-gruende-sich-das-javascript-framework-react-genauer-anzuschauen-24769\">JAXenter</a> erschienen.</em></p>\n<p>Das React Framework wurde 2013 von Facebook als Open-Source-Lösung zur Verfügung gestellt und erfreut sich seitdem zunehmender Beliebtheit unter Web-Entwicklern. So gibt es schon eine ganze Reihe namhafter Webseiten, die React bereits im produktiven Einsatz haben. Neben Facebooks eigenen Anwendungen sowie Instagram kommt das Framework beispielsweise auf der Website des Wall Street Journals, des Foto-Dienstes Smugmug oder auch bei Airbnb zum Einsatz.</p>\n",
+    "_date": "12.8.2015"
+  },
+  {
+    "slug": "sonnenuntergang",
+    "alias": "2013/08/21/sonnenuntergang",
+    "publish_time": "2013-08-21T20:30:15.000Z",
+    "title": "Sonnenuntergang",
+    "image": "/uploads/20130820-130820-035.jpg",
+    "image_position": "skip",
+    "summary": "Neuer Versuch",
+    "content": "Zwar zeigte sich die Sonne",
+    "tags": [
+      "Fotografie",
+      "Sonnenuntergang"
+    ],
+    "_summaryHtml": "<p>Neuer Versuch</p>\n",
+    "_contentHtml": "<p>Zwar zeigte sich die Sonne</p>\n",
+    "_date": "21.8.2013",
+    "published": false
+  },
+  {
+    "slug": "osgi-by-example",
+    "alias": "2009/06/27/osgi-by-example",
+    "publish_time": "2009-06-27T18:26:14.000Z",
+    "title": "OSGi by Example",
+    "summary": "Am 25. Juni \"OSGi by Example\"",
+    "content": "Für die Beispiele des Talks haben wir unseren grafischen Log-Viewer Sherlog verwendet.\n\n* [OSGi by Example](/uploads/osgi-by-example.pdf)\n",
+    "tags": [
+      "Artikel und Vorträge",
+      "OSGi",
+      "Softwareentwicklung"
+    ],
+    "_summaryHtml": "<p>Am 25. Juni &quot;OSGi by Example&quot;</p>\n",
+    "_contentHtml": "<p>Für die Beispiele des Talks haben wir unseren grafischen Log-Viewer Sherlog verwendet.</p>\n<ul>\n<li><a href=\"/uploads/osgi-by-example.pdf\">OSGi by Example</a></li>\n</ul>\n",
+    "_date": "27.6.2009",
+    "published": true
+  },
+  {
+    "slug": "das-osgi-buch",
+    "publish_time": "2008-04-05T18:18:47.000Z",
+    "title": "Das OSGi Buch",
+    "image": "/uploads/die_osgi_service_platform_01.jpg",
+    "image_position": "left",
+    "summary": "OSGi Buch",
+    "content": "Ein *OSGi Buch*",
+    "tags": [
+      "Artikel und Vorträge",
+      "Buch",
+      "Eclipse Equinox",
+      "OSGi",
+      "Softwareentwicklung"
+    ],
+    "_summaryHtml": "<p>OSGi Buch</p>\n",
+    "_contentHtml": "<p>Ein <em>OSGi Buch</em></p>\n",
+    "_date": "5.4.2008",
+    "published": true
+  }
+]

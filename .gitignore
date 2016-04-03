@@ -1,0 +1,10 @@
+node_modules/
+typings/
+client/libs/bower/
+_dist/
+dist/
+mongodb-data/
+.idea/workspace.xml
+my-notes.txt
+npm-debug.log
+.vagrant/

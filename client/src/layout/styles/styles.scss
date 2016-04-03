@@ -1,0 +1,24 @@
+@import 'normalize';
+
+/* https://www.google.com/fonts#UsePlace:use/Collection:Lora:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic */
+@import 'utils';
+
+// -------------------------------------------------------------------------------
+// -- Colors
+// -------------------------------------------------------------------------------
+$whiteColor: white;
+$lightBackgroundColor: #FFEBD5;
+$headerColor: #FFBB70;
+$borderAndProgressColor: #FFBB70;
+$textColor: #7F5E38;
+$textColorDisabled: lighten(#7F5E38, 30%);
+$largeDisplay: 1024px;
+
+// -------------------------------------------------------------------------------
+// -- Components
+// -------------------------------------------------------------------------------
+@import 'layout';
+@import 'blog';
+
+@import 'admin';
+

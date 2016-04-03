@@ -1,0 +1,92 @@
+.Divider {
+
+  padding-top: 15px;
+  margin-bottom: 45px;
+
+  margin-left: -50px;
+  margin-right: -50px;
+  background-color: lighten($lightBackgroundColor, 5%);
+  border-bottom: 1px solid $textColor;
+}
+
+.PostEditor {
+
+  .Alert {
+    padding: 4px 12px 4px 12px;
+  }
+
+  .error {
+    background-color: #FF9E96;
+    color: #FF594C;
+    font-weight: bold;
+  }
+
+  .success {
+    background-color: #A3C3A9;
+    color: #4A8654;
+    font-weight: bold;
+  }
+
+  .Tag {
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    i {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+  .EditorGroup {
+    display: table;
+    margin-top: 30px;
+    width: 100%;
+
+    border-bottom: 1px solid $lightBackgroundColor;
+
+    &:focus,
+    &:hover {
+      border-bottom: 1px solid $textColor;
+    }
+
+    .Label {
+    }
+
+    input {
+      outline: 0;
+    }
+
+    textarea {
+      outline: 0;
+    }
+
+    .Control-AddOn {
+      display: table-cell;
+      width: 1%;
+      padding: 5px;
+      color: lighten($textColor, 20%);
+
+      &:hover {
+        color: $textColor;
+        cursor: pointer;
+      }
+    }
+
+    .Control {
+      text-align: left;
+      display: table-cell;
+      width: 100%;
+      padding: 5px;
+      margin: 0 15px 0 0;
+      border: 0;
+
+      @include placeholder {
+        color: lighten($textColor, 20%);
+      }
+
+    }
+    input[type='checkbox'].Control {
+      width: auto;
+    }
+  }
+}
+

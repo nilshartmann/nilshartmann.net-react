@@ -1,0 +1,194 @@
+html {
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+
+
+.Header {
+  margin: 0 0 20px 0;
+  min-height: 46px;
+  padding: 14px 14px 0 14px;
+
+  color: $whiteColor;
+  background-color: $textColor;
+  text-align: center;
+
+  .Title {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+  a,
+  a.active {
+    color: $whiteColor;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.Main {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+
+.Container {
+
+  @media screen and (min-width: $largeDisplay) {
+    float: left;
+    width: 75%;
+  }
+}
+
+.Sidebar {
+  text-align: center;
+
+
+  @media screen and (min-width: $largeDisplay) {
+    float: left;
+    width: 25%;
+  }
+
+  .Section {
+    color: $textColor;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    background-color: white;
+
+    @media screen and (min-width: $largeDisplay) {
+      max-width: 170px;
+      margin: 0 auto 30px;
+
+
+    }
+
+    .ReadMore {
+      font-weight: normal;
+      font-family: "PT Sans", sans-serif;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 1.2;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .Image {
+    margin-bottom: 15px;
+    width: auto;
+    display: inline-block;
+    padding: 0 15px;
+
+    @media screen and (min-width: $largeDisplay) {
+      width: 100%;
+      padding: 0;
+    }
+    img {
+      text-align: center;
+      margin: 0 auto 5px;
+      display: block;
+      width: 120px;
+    }
+  }
+}
+
+
+.Footer {
+  margin-top: 30px;
+  //border-top: 1px solid $headerColor;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 0 10px 0;
+
+  a,
+  a.active {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.Subheader {
+  height: 32px;
+  background-color: lighten($textColor, 20%);
+  text-align: center;
+  margin: 0 0 20px 0;
+
+  .Tab {
+    display: inline-block;
+  }
+}
+
+.Background {
+  height: 100vh;
+  background-color: lighten($lightBackgroundColor, 5%);
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: auto;
+
+  // force vertical scrollbar
+  overflow-y: scroll;
+}
+
+
+
+.Fullwidth {
+  max-width: 100%;
+}
+
+.Column-2 {
+  float:left;
+  box-sizing: border-box;
+  width: 50%;
+  max-width: 910px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.SocialIcons {
+  display: block;
+  vertical-align: middle;
+  padding: 0 0 10px 0;
+  @media screen and (min-width: $largeDisplay) {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+    float: right;
+    margin-right: 20px;
+    padding: 0;
+  }
+  .SocialIcon {
+    margin-right: 15px;
+    // display: inline-block;
+
+    &:hover {
+      i {
+        color: $lightBackgroundColor;
+      }
+    }
+  }
+}
+
+

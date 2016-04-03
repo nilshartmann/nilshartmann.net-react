@@ -1,0 +1,17 @@
+{
+  "slug": "das-osgi-buch",
+  "publish_time": "2008-04-05T18:18:47.000Z",
+  "title": "Das OSGi Buch",
+  "image": "/uploads/die_osgi_service_platform_01.jpg",
+  "image_position": "left",
+  "summary": "OSGi Buch",
+  "content": "Ein *OSGi Buch*",
+  "published": true,
+  "tags": [
+    "Artikel und Vorträge",
+    "Buch",
+    "Eclipse Equinox",
+    "OSGi",
+    "Softwareentwicklung"
+  ]
+}
