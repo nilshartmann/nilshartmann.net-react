@@ -40,7 +40,7 @@ class Layout extends React.Component {
             <div className='Section'>
               <h1 className='Title'>Bücher</h1>
               <div className='Image'>
-                <a className='ReadMore'  href='https://www.dpunkt.de/buecher/5542/9783864903274-react-12388.html' target='_blank'><img src='/uploads/react-buch-titel.jpg'/>React - Einführung und Grundlagen (Mai 2016)</a>
+                <a className='ReadMore'  href='https://www.dpunkt.de/buecher/5542/9783864903274-react-12388.html' target='_blank'><img src='/uploads/react-buch-titel.jpg'/>React - Die praktische Einf&uuml;hrung in React, React Router und Redux (Mai 2016)</a>
               </div>
               <div className='Image'>
                 <Link className='ReadMore'  to='/posts/das-osgi-buch'><img  src='/uploads/die_osgi_service_platform_01.jpg'/>Die OSGi Service Platform (April 2008)</Link>
