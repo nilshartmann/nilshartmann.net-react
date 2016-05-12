@@ -12,17 +12,18 @@ sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get install -y libstdc++6
 
-rm -rf htdocs/nilshartmann.net && mkdir -p htdocs/nilshartmann.net/simpleblog
+rm -rf htdocs/nilshartmann.net && mkdir -p htdocs/nilshartmann.net/nilshartmann.net
 # TODO: clone instead ?!
-cp -r /vagrant_data/simpleblog/client/ htdocs/nilshartmann.net/simpleblog
-cp -r /vagrant_data/simpleblog/server/ htdocs/nilshartmann.net/simpleblog
-cp -r /vagrant_data/simpleblog/*.json htdocs/nilshartmann.net/simpleblog
-cp -r /vagrant_data/simpleblog/*.js htdocs/nilshartmann.net/simpleblog
-cp /vagrant_data/simpleblog/.babelrc htdocs/nilshartmann.net/simpleblog
+cp -r /vagrant_data/nilshartmann.net/client/ htdocs/nilshartmann.net/nilshartmann.net
+cp -r /vagrant_data/nilshartmann.net/server/ htdocs/nilshartmann.net/nilshartmann.net
+cp -r /vagrant_data/nilshartmann.net/test/ htdocs/nilshartmann.net/nilshartmann.net
+cp -r /vagrant_data/nilshartmann.net/*.json htdocs/nilshartmann.net/nilshartmann.net
+cp -r /vagrant_data/nilshartmann.net/*.js htdocs/nilshartmann.net/nilshartmann.net
+cp /vagrant_data/nilshartmann.net/.babelrc htdocs/nilshartmann.net/nilshartmann.net
 cp -r /vagrant_data/content htdocs/nilshartmann.net
 
 sudo chown -R vagrant htdocs/
-cd htdocs/nilshartmann.net/simpleblog/
-# npm install
+cd htdocs/nilshartmann.net/nilshartmann.net/
+npm install
 # npm run build
 
