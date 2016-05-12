@@ -70,8 +70,6 @@ html {
     @media screen and (min-width: $largeDisplay) {
       max-width: 170px;
       margin: 0 auto 30px;
-
-
     }
 
     .ReadMore {
@@ -80,11 +78,12 @@ html {
       font-style: normal;
       font-size: 14px;
       line-height: 1.2;
+    }
 
-      &:hover {
+    a.ReadMore:hover {
         text-decoration: underline;
       }
-    }
+
   }
 
   .Image {
