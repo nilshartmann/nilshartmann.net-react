@@ -49,7 +49,7 @@ class Layout extends React.Component {
             <div className='Section'>
               <h1 className='Title'>Talks</h1>
               <div className='Image'>
-                <a className='ReadMore' href='https://jax.de/session/komponentenentwicklung-mit-react/' target='_blank'><img src='/uploads/JAX_2016_Speakerbutton_Rectangle.jpg'/>Komponentenentwicklung mit React (April 2016) </a>
+                <a className='ReadMore' href='https://www.codetalks.de/2016/programm/webanwendungen-mit-react-entwickeln' target='_blank'><img src='/uploads/codetalkshh.png'/>Webanwendungen mit React entwickeln (Sept.&nbsp;2016) </a>
               </div>
               <div className='Image'>
                 <a className='ReadMore' href='https://www.enterjs.de/abstracts.html#worksop-react' target='_blank'><img  src='/uploads/enterjs.svg'/>React Einsteiger Workshop (Juni 2016) </a>
