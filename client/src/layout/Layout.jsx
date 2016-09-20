@@ -25,6 +25,8 @@ class Layout extends React.Component {
 
     const adminLinks = this.renderAdminLinks();
 
+
+
     return <div className='Background'>
       <div className='Header'>
         <Link className='Title' to='/'>Nils Hartmann</Link>
@@ -36,11 +38,16 @@ class Layout extends React.Component {
           <div className='Container'>
             {children}
           </div>
-          <div className='Sidebar'e>
+
+          <div className='Sidebar'>
+            <div className='Section'>
+              <h1 className='Title'>Beratung</h1>
+              <span className='ReadMore'>Gerne berate und unterstütze ich dich und dein Team rund um das Thema JavaScript (insbesondere React, Redux, TypeScript, Architektur, CI/CD) in Form von Schulungen, Workshops oder Coaching. Bei Interesse einfach <a href='mailto:nils@nilshartmann.net'>anfragen</a>.</span>
+            </div>
             <div className='Section'>
               <h1 className='Title'>Bücher</h1>
               <div className='Image'>
-                <a className='ReadMore'  href='/posts/react-buch-erschienen'><img src='/uploads/react-buch-titel.jpg'/>React - Die praktische Einf&uuml;hrung in React, React Router und Redux (Juni 2016)</a>
+                <a className='ReadMore'  href='/posts/react-buch-erschienen'><img src='/uploads/react-buch-titel.jpg'/>React - Die praktische Einf&uuml; hrung in React, React Router und Redux (Juni 2016) </a>
               </div>
               <div className='Image'>
                 <Link className='ReadMore'  to='/posts/das-osgi-buch'><img  src='/uploads/die_osgi_service_platform_01.jpg'/>Die OSGi Service Platform (April 2008) </Link>
@@ -49,7 +56,7 @@ class Layout extends React.Component {
             <div className='Section'>
               <h1 className='Title'>Talks</h1>
               <div className='Image'>
-                <a className='ReadMore' href='https://www.codetalks.de/2016/programm/webanwendungen-mit-react-entwickeln' target='_blank'><img src='/uploads/codetalkshh.png'/>Webanwendungen mit React entwickeln (Sept.&nbsp;2016) </a>
+                <a className='ReadMore' href='https://www.codetalks.de/2016/programm/webanwendungen-mit-react-entwickeln' target='_blank'><img src='/uploads/codetalkshh.png'/>Webanwendungen mit React entwickeln (Sept.&nbsp; 2016) </a>
               </div>
               <div className='Image'>
                 <a className='ReadMore' href='https://www.enterjs.de/abstracts.html#worksop-react' target='_blank'><img  src='/uploads/enterjs.svg'/>React Einsteiger Workshop (Juni 2016) </a>
@@ -61,11 +68,6 @@ class Layout extends React.Component {
                 <a className='ReadMore' href='https://jaxenter.de/tag/keine-angst-vor-javascript' target='_blank'><img src='/uploads/jaxenter.jpg'/>Keine Angst vor JavaScript!(JaxEnter-Kolumne) </a>
               </div>
             </div>
-            <div className='Section'>
-              <h1 className='Title'>Beratung</h1>
-              <span className='ReadMore'>Gerne berate ich rund um das Thema JavaScript in Form von Schulungen, Workshops oder Coaching. Bei Interesse einfach <a href='mailto:nils@nilshartmann.net'>anfragen</a></span>
-            </div>
-
           </div>
         </div>
         <div className='Footer'>
