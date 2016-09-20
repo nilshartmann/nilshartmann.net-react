@@ -69,6 +69,7 @@
     "mocha": "^2.4.5",
     "ncp": "^2.0.0",
     "node-libs-browser": "^0.5.3",
+    "node-sass": "^3.8.0",
     "nodemon": "^1.8.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
