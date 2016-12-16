@@ -174,17 +174,18 @@ export function createWritableContentStore(dir) {
     console.log('COMMITTE: ', fileOrFiles);
     const files = Array.isArray(fileOrFiles) ? fileOrFiles : [fileOrFiles];
     return NodeGit.Repository.open(dir)
-      .then(repo => {
-        return repo.openIndex().then(index => {
-          files.forEach(file => {
-            const f = file.replace('\\', '/');
-            const addRes = index.addByPath(f);
-            if (addRes !== 0) {
-              throw new Error(`Failed to commit '${file}': ${addRes}`);
-            }
-          });
-          index.write();
-          return index.writeTree();
+			.then(repo => {
+				let index;
+				return repo.refreshIndex().then(indexResult => {
+					index = indexResult;
+					const addPromises = files.map(file => {
+						const f = file.replace('\\', '/');
+						return index.addByPath(f)
+							.then(addRes => { if (addRes) { throw new Error(`Failed to commit '${file}': ${addRes}`); } else return addRes; });
+					});
+					return Promise.all(addPromises)
+						.then(() => index.write())
+						.then(() => index.writeTree())
         }).then(oid => {
           return NodeGit.Reference.nameToId(repo, "HEAD")
             .then(head => repo.getCommit(head))

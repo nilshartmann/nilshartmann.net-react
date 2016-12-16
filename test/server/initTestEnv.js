@@ -28,7 +28,7 @@ export default function initTestEnv() {
     return cpr(dir, basedir)
       .then(dest => NodeGit.Repository.init(dest, 0))
       .then(repo => {
-        return repo.openIndex().then(index => {
+        return repo.refreshIndex().then(index => {
           return index.addAll()
             .then(() => index.write())
             .then(() => index.writeTree());

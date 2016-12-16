@@ -30,6 +30,10 @@ const serverConfig = Object.assign(
   }, config
 );
 
+process.on('unhandledRejection', function(reason, p){
+    console.log("Possibly Unhandled Rejection at: Promise ", p, " reason: ", reason);
+});
+
 // TODO move to startServer(?)
 serverConfig.indexHtml = renderIndexHtml(serverConfig.publicBackendUrl);
 
