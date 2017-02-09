@@ -54,12 +54,19 @@ class Layout extends React.Component {
               </div>
             </div>
             <div className='Section'>
-              <h1 className='Title'>Talks</h1>
+              <h1 className='Title'>Talks und Workshops</h1>
               <div className='Image'>
-                <a className='ReadMore' href='https://www.codetalks.de/2016/programm/webanwendungen-mit-react-entwickeln' target='_blank'><img src='/uploads/codetalkshh.png'/>Webanwendungen mit React entwickeln (Sept.&nbsp; 2016) </a>
+                <img src='/uploads/1486677191125_JAX_2017.png' alt='Jax Konferenz 2017'/>
+                <p><b>Mainz, Mai 2017</b></p>
+                <p style={{marginBottom: '0.5em'}}><a className='ReadMore' href='https://jax.de/session/warum-graphql-und-nicht-rest/' target='_blank'>Warum GraphQL und nicht REST?</a></p>
+                <p style={{marginBottom: '0.5em'}}><a className='ReadMore' href='https://jax.de/session/rethinking-best-practices-mit-react-webanwendungen-entwickeln/' target='_blank'>Rethinking Best Practices – mit React Webanwendungen entwickeln</a></p>
+                <p><a className='ReadMore' href='https://jax.de/session/freitag-12-05-2017-webanwendungen-mit-react-entwickeln-eine-praktische-einfuehrung/' target='_blank'>Webanwendungen mit React entwickeln – eine praktische Einführung (Workshop, 1 Tag)</a></p>
               </div>
               <div className='Image'>
-                <a className='ReadMore' href='https://www.enterjs.de/abstracts.html#worksop-react' target='_blank'><img  src='/uploads/enterjs.svg'/>React Einsteiger Workshop (Juni 2016) </a>
+                <img  src='/uploads/1486678559642_dpunkt.jpg'/>
+                <p><b>Heidelberg, 1./2. Juni</b></p>
+                <a className='ReadMore' href='http://dpunkt.de/react' target='_blank'>
+                  Workshop: Einführung in die Philosophie von React und Redux</a>
               </div>
             </div>
             <div className='Section'>
