@@ -41,8 +41,8 @@ class Layout extends React.Component {
 
           <div className='Sidebar'>
             <div className='Section'>
-              <h1 className='Title'>Beratung</h1>
-              <span className='ReadMore'>Gerne berate und unterstütze ich dich und dein Team rund um das Thema JavaScript (insbesondere React, Redux, TypeScript, Architektur, CI/CD) in Form von Schulungen, Workshops oder Coaching. Bei Interesse einfach <a href='mailto:nils@nilshartmann.net'>anfragen</a>.</span>
+              <h1 className='Title'>React-Workshops</h1>
+              <span className='ReadMore'>Gerne unterstütze ich dich und dein Team rund um das Thema JavaScript (insbesondere React, Redux und TypeScript) zum Beispiel in Form von Workshops oder Code-Reviews. Bei Interesse einfach <a href='mailto:nils@nilshartmann.net'>anfragen</a>.</span>
             </div>
             <div className='Section'>
               <h1 className='Title'>Bücher</h1>
@@ -56,17 +56,16 @@ class Layout extends React.Component {
             <div className='Section'>
               <h1 className='Title'>Talks und Workshops</h1>
               <div className='Image'>
-                <img src='/uploads/1486677191125_JAX_2017.png' alt='Jax Konferenz 2017'/>
-                <p><b>Mainz, Mai 2017</b></p>
-                <p style={{marginBottom: '0.5em'}}><a className='ReadMore' href='https://jax.de/session/warum-graphql-und-nicht-rest/' target='_blank'>Warum GraphQL und nicht REST?</a></p>
-                <p style={{marginBottom: '0.5em'}}><a className='ReadMore' href='https://jax.de/session/rethinking-best-practices-mit-react-webanwendungen-entwickeln/' target='_blank'>Rethinking Best Practices – mit React Webanwendungen entwickeln</a></p>
-                <p><a className='ReadMore' href='https://jax.de/session/freitag-12-05-2017-webanwendungen-mit-react-entwickeln-eine-praktische-einfuehrung/' target='_blank'>Webanwendungen mit React entwickeln – eine praktische Einführung (Workshop, 1 Tag)</a></p>
+                <img src='/uploads/1498426480105_wjax_logo_navi.png' alt='W-Jax 2017'/>
+                <p><b>München, November 2017</b></p>
+                <p style={{marginBottom: '0.5em'}}><a className='ReadMore' href='https://jax.de/web-development-javascript/react-und-typescript-workshop-moderne-webanwendungen-entwickeln/' target='_blank'>Moderne Webanwendungen mit React und TypeScript entwickeln (Workshop, 1 Tag)</a></p>
+                <p><a className='ReadMore' href='https://jax.de/web-development-javascript/das-javascript-oekosystem-orientierungshilfen/' target='_blank'>Das JavaScript-Ökosystem: Orientierungshilfen</a></p>
               </div>
               <div className='Image'>
-                <img  src='/uploads/1486678559642_dpunkt.jpg'/>
-                <p><b>Heidelberg, 1./2. Juni</b></p>
-                <a className='ReadMore' href='http://dpunkt.de/react' target='_blank'>
-                  Workshop: Einführung in die Philosophie von React und Redux</a>
+                <img  src='/uploads/1498424152641_nils-im-workshop.jpeg'/>
+                <p><b>Vergangene Talks</b></p>
+                <a className='ReadMore' href='https://nilshartmann.net/posts/vergangene-talks' target='_blank'>
+                  Übersicht über vergangene Talks</a>
               </div>
             </div>
             <div className='Section'>
