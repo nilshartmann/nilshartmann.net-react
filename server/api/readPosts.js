@@ -1,11 +1,11 @@
-import path from 'path';
-import fs from 'fs';
+import path from "path";
+import fs from "fs";
 
-import MarkdownRenderer from '../util/MarkdownRenderer';
+import MarkdownRenderer from "../util/MarkdownRenderer";
 
 function listFiles(dir) {
   return new Promise((resolve, reject) => {
-    console.log('Reading files from ' + dir);
+    console.log("Reading files from " + dir);
 
     fs.readdir(dir, (err, files) => {
       if (err) {
@@ -19,7 +19,7 @@ function listFiles(dir) {
 
 function readFile(file) {
   return new Promise((resolve, reject) => {
-    fs.readFile(file, 'utf-8', (err, content) => {
+    fs.readFile(file, "utf-8", (err, content) => {
       if (err) {
         return reject(err);
       }
@@ -28,7 +28,6 @@ function readFile(file) {
     });
   });
 }
-
 
 function readFiles(files) {
   return Promise.all(files.map(file => readFile(file)));
@@ -52,10 +51,5 @@ function orderPostsByDate(posts) {
 }
 
 export default function readPosts(dir) {
-  return Promise.resolve(dir)
-    .then(listFiles)
-    .then(readFiles)
-    .then(convertToPosts)
-    .then(orderPostsByDate)
-    .catch(console.error);
+  return Promise.resolve(dir).then(listFiles).then(readFiles).then(convertToPosts).then(orderPostsByDate).catch(console.error);
 }

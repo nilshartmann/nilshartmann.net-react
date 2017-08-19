@@ -1,15 +1,15 @@
 /**
  * Import dependencies
  */
-const path = require('path');
-const Webpack = require('webpack');
-const WebpackPlugin = require('hapi-webpack-plugin');
-const config = require('../webpack.config.hot');
+const path = require("path");
+const Webpack = require("webpack");
+const WebpackPlugin = require("hapi-webpack-plugin");
+const config = require("../webpack.config.hot");
 
 export function setup(server, publicPath, indexHtml) {
   console.log("PublicPath: " + publicPath);
 
-  server.ext('onPreResponse', (request, reply) => {
+  server.ext("onPreResponse", (request, reply) => {
     if (request.response.isBoom && request.response.output.statusCode === 404) {
       // use index.html as fallback in case of 404 errors (esp to enable React Router with BrowserHistory)
       // (something like Webpack Devserver's --history-api-fallback option)
@@ -21,7 +21,7 @@ export function setup(server, publicPath, indexHtml) {
   const compiler = new Webpack(config);
 
   const assets = {
-    noInfo:     true,
+    noInfo: true,
     publicPath: config.output.publicPath
   };
 
@@ -30,14 +30,15 @@ export function setup(server, publicPath, indexHtml) {
   /**
    * Register plugin and start server
    */
-  server.register({
+  server.register(
+    {
       register: WebpackPlugin,
-      options:  {compiler, assets, hot}
+      options: { compiler, assets, hot }
     },
     error => {
       if (error) {
         console.error(error);
       }
-    });
+    }
+  );
 }
-

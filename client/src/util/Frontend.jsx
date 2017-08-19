@@ -21,4 +21,3 @@ export function postTitle(post) {
 export function tagUrl(tag) {
   return `/tags/${tag}`;
 }
-

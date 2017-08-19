@@ -1,33 +1,32 @@
-import 'isomorphic-fetch';
+import "isomorphic-fetch";
 
-import { shuffle } from '../util/Utils';
+import { shuffle } from "../util/Utils";
 
-
-const FLICKR_END_POINT = 'https://api.flickr.com/services/rest/';
+const FLICKR_END_POINT = "https://api.flickr.com/services/rest/";
 
 export function createReadApi(contentStore, config) {
   function queryPosts(options = {}) {
-    return contentStore.readPosts()
-      .then(posts => posts.filter(post => !options.filter || post.tags.find((t) => t === options.filter.tag)))
-      .then(posts => options.limit ? posts.slice(0, options.limit) : posts);
+    return contentStore
+      .readPosts()
+      .then(posts => posts.filter(post => !options.filter || post.tags.find(t => t === options.filter.tag)))
+      .then(posts => (options.limit ? posts.slice(0, options.limit) : posts));
   }
 
   function getPost(slug) {
-    return contentStore.readPosts()
-      .then(posts => {
-        const thisPost = posts.findIndex((post) => slug === post.slug);
-        if (thisPost === -1) {
-          // not found
-          return null;
-        }
+    return contentStore.readPosts().then(posts => {
+      const thisPost = posts.findIndex(post => slug === post.slug);
+      if (thisPost === -1) {
+        // not found
+        return null;
+      }
 
-        const copy = Object.assign({}, posts[thisPost], {
-          _prev: thisPost > 0 ? posts[thisPost - 1] : undefined,
-          _next: thisPost < posts.length - 1 ? posts[thisPost + 1] : undefined
-        });
-
-        return copy;
+      const copy = Object.assign({}, posts[thisPost], {
+        _prev: thisPost > 0 ? posts[thisPost - 1] : undefined,
+        _next: thisPost < posts.length - 1 ? posts[thisPost + 1] : undefined
       });
+
+      return copy;
+    });
   }
 
   function getTags(withCount) {
@@ -81,13 +80,12 @@ export function createReadApi(contentStore, config) {
   let flickrImages = null;
 
   function getFlickrImages() {
-
     // TODO: when to refresh the cache? (a) on new uploads to flickr (b) is the photo secret valid forever?
     if (flickrImages) {
       return Promise.resolve(flickrImages);
     }
 
-    console.log('Fetching Flickr Images');
+    console.log("Fetching Flickr Images");
 
     const { flickr: { apiKey, userId } } = config;
     // https://www.flickr.com/services/api/flickr.people.getPublicPhotos.html
@@ -95,8 +93,8 @@ export function createReadApi(contentStore, config) {
     return fetch(url)
       .then(response => response.json())
       .then(flickrResponse => {
-        if (flickrResponse.stat !== 'ok') {
-          console.err('Flickr returned error:');
+        if (flickrResponse.stat !== "ok") {
+          console.err("Flickr returned error:");
           console.dir(flickrResponse);
         }
 
@@ -108,7 +106,10 @@ export function createReadApi(contentStore, config) {
           flickrUrl: `https://www.flickr.com/photos/${photo.owner}/${photo.id}`
         }));
       })
-      .then(flickrPhotos => { flickrImages = flickrPhotos; return flickrPhotos });
+      .then(flickrPhotos => {
+        flickrImages = flickrPhotos;
+        return flickrPhotos;
+      });
   }
 
   return {

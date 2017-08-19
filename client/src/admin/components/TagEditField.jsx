@@ -2,7 +2,7 @@
 // --- Nils Hartmann | http://nilshartmann.net                             ---
 // ---------------------------------------------------------------------------
 
-import React from 'react';
+import React from "react";
 
 export default class TagEditField extends React.Component {
   static propTypes = {
@@ -34,7 +34,7 @@ export default class TagEditField extends React.Component {
       }
 
       this.props.onTag(this.inputComponent.value);
-      this.setState({ tagInput: '' });
+      this.setState({ tagInput: "" });
       this.inputComponent.focus();
     }
 
@@ -56,12 +56,12 @@ export default class TagEditField extends React.Component {
   }
 
   findMatchingTag(value) {
-    if (value === '') {
+    if (value === "") {
       return null;
     }
 
     const searchFor = value.toLowerCase();
-    const tagFound = this.props.availableTags.find((tag) => {
+    const tagFound = this.props.availableTags.find(tag => {
       return tag.tag.toLowerCase().startsWith(searchFor);
     });
 
@@ -69,10 +69,18 @@ export default class TagEditField extends React.Component {
   }
 
   render() {
-    return <div className='EditorGroup'>
-      <input ref='tagInput' type='text' className='Control' placeholder='Tags' onChange={this.onTagInputChange}
-        onKeyUp={this.onTagInputKeyUp} value={this.state.tagInput}/>
-    </div>;
+    return (
+      <div className="EditorGroup">
+        <input
+          ref="tagInput"
+          type="text"
+          className="Control"
+          placeholder="Tags"
+          onChange={this.onTagInputChange}
+          onKeyUp={this.onTagInputKeyUp}
+          value={this.state.tagInput}
+        />
+      </div>
+    );
   }
 }
-

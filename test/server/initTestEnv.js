@@ -1,17 +1,17 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
-import tmp from 'tmp';
-import wrench from 'wrench';
-import rimraf from 'rimraf';
+import tmp from "tmp";
+import wrench from "wrench";
+import rimraf from "rimraf";
 
-import NodeGit from 'nodegit';
+import NodeGit from "nodegit";
 
 function cpr(src, dest) {
   const options = {
     forceDelete: true,
     preserveTimestamps: true
-  }
+  };
 
   return new Promise((resolve, reject) => {
     wrench.copyDirSyncRecursive(src, dest, options);
@@ -20,27 +20,21 @@ function cpr(src, dest) {
 }
 
 export default function initTestEnv() {
-  const basedir = tmp.dirSync({prefix: 'simpleblog_test_' }).name;
-  console.log('Base dir', basedir);
+  const basedir = tmp.dirSync({ prefix: "simpleblog_test_" }).name;
+  console.log("Base dir", basedir);
 
   function initGitRepositoryFrom(dir) {
-
-    return cpr(dir, basedir)
-      .then(dest => NodeGit.Repository.init(dest, 0))
-      .then(repo => {
-        return repo.refreshIndex().then(index => {
-          return index.addAll()
-            .then(() => index.write())
-            .then(() => index.writeTree());
-        }).then(oid => {
-          const author = NodeGit.Signature.now(
-            "Nils Hartmann",
-            "nils@nilshartmann.net"
-            );
-          return repo.createCommit("HEAD", author, author, "Initial Commit", oid)
-            .then(() => repo.workdir())
+    return cpr(dir, basedir).then(dest => NodeGit.Repository.init(dest, 0)).then(repo => {
+      return repo
+        .refreshIndex()
+        .then(index => {
+          return index.addAll().then(() => index.write()).then(() => index.writeTree());
+        })
+        .then(oid => {
+          const author = NodeGit.Signature.now("Nils Hartmann", "nils@nilshartmann.net");
+          return repo.createCommit("HEAD", author, author, "Initial Commit", oid).then(() => repo.workdir());
         });
-      });
+    });
   }
 
   function readJson(relPath) {
@@ -56,15 +50,19 @@ export default function initTestEnv() {
   }
 
   function isRepoClean() {
-    return NodeGit.Repository.open(basedir)
+    return NodeGit.Repository
+      .open(basedir)
       .then(repo => repo.getStatus())
-      .then(statuses => { console.log(statuses); return statuses; })
+      .then(statuses => {
+        console.log(statuses);
+        return statuses;
+      })
       .then(statuses => statuses.length === 0);
   }
 
   function dispose() {
     if (basedir && fs.statSync(basedir).isDirectory()) {
-      console.log('Remove base dir ', basedir);
+      console.log("Remove base dir ", basedir);
       rimraf.sync(basedir);
     }
   }

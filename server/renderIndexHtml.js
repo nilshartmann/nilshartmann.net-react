@@ -1,6 +1,5 @@
-export default function renderIndexHtml(backendUrl, initialState, html = '') {
-
-  const initialStateString = initialState ? `INITIAL_STATE: ${JSON.stringify(initialState)}` : '';
+export default function renderIndexHtml(backendUrl, initialState, html = "") {
+  const initialStateString = initialState ? `INITIAL_STATE: ${JSON.stringify(initialState)}` : "";
 
   return `
 <!DOCTYPE html>
@@ -33,5 +32,4 @@ export default function renderIndexHtml(backendUrl, initialState, html = '') {
           src="/_dist/main.js">
   </script>
 </html>`;
-
 }

@@ -2,16 +2,16 @@
 // --- Nils Hartmann | http://nilshartmann.net                             ---
 // ---------------------------------------------------------------------------
 
-import React from 'react';
-import PostEditor from '../components/PostEditor';
+import React from "react";
+import PostEditor from "../components/PostEditor";
 
-import connectModel from '../../model/connectModel';
+import connectModel from "../../model/connectModel";
 
 class PostEditorPage extends React.Component {
   componentDidMount() {
-    console.log('.......................................................');
+    console.log(".......................................................");
     const { params, loadPost } = this.props;
-    console.log('params', params);
+    console.log("params", params);
     if (params.slug) {
       loadPost(params.slug);
     }
@@ -26,8 +26,12 @@ class PostEditorPage extends React.Component {
   }
 
   render() {
-console.log('....................................................... post', this.props.post);
-    return <div><PostEditor {...this.props} /></div>;
+    console.log("....................................................... post", this.props.post);
+    return (
+      <div>
+        <PostEditor {...this.props} />
+      </div>
+    );
   }
 }
 
@@ -37,5 +41,8 @@ PostEditorPage.propTypes = {
   loadPost: React.PropTypes.func.isRequired
 };
 
-
-export default connectModel(PostEditorPage, ({ post, tags }) => ({ post, tags }), ({ loadPost, loadTags, savePost }) => ({ loadPost, loadTags, savePost }));
+export default connectModel(
+  PostEditorPage,
+  ({ post, tags }) => ({ post, tags }),
+  ({ loadPost, loadTags, savePost }) => ({ loadPost, loadTags, savePost })
+);

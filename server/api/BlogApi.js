@@ -1,37 +1,36 @@
-import fs from 'fs';
-import sanitize from 'sanitize-filename';
+import fs from "fs";
+import sanitize from "sanitize-filename";
 
-import readPosts from './readPosts';
+import readPosts from "./readPosts";
 
 export default class Blog {
   constructor(postDir, uploadDir) {
     this.postDir = postDir;
     this.uploadDir = uploadDir;
-    console.log('uploadDir: ' + uploadDir);
+    console.log("uploadDir: " + uploadDir);
   }
 
   queryPosts(options = {}) {
     return readPosts(this.postDir)
-      .then(posts => posts.filter(post => !options.filter || post.tags.find((t) => t === options.filter.tag)))
-      .then(posts => options.limit ? posts.slice(0, options.limit) : posts);
+      .then(posts => posts.filter(post => !options.filter || post.tags.find(t => t === options.filter.tag)))
+      .then(posts => (options.limit ? posts.slice(0, options.limit) : posts));
   }
 
   getPost(slug) {
-    return readPosts(this.postDir)
-      .then(posts => {
-        const thisPost = posts.findIndex((post) => slug === post.slug);
-        if (thisPost === -1) {
-          // not found
-          return null;
-        }
+    return readPosts(this.postDir).then(posts => {
+      const thisPost = posts.findIndex(post => slug === post.slug);
+      if (thisPost === -1) {
+        // not found
+        return null;
+      }
 
-        const copy = Object.assign({}, posts[thisPost], {
-          prev: thisPost > 0 ? posts[thisPost - 1] : undefined,
-          next: thisPost < posts.length - 1 ? posts[thisPost + 1] : undefined
-        });
-        
-        return copy;
+      const copy = Object.assign({}, posts[thisPost], {
+        prev: thisPost > 0 ? posts[thisPost - 1] : undefined,
+        next: thisPost < posts.length - 1 ? posts[thisPost + 1] : undefined
       });
+
+      return copy;
+    });
   }
 
   getTags(withCount) {
@@ -53,7 +52,7 @@ export default class Blog {
             }
           } else {
             if (!tagMap[tag]) {
-              const t = {count: 1, tag: tag};
+              const t = { count: 1, tag: tag };
               tagMap[tag] = t;
               result.tags.push(t);
             } else {
@@ -88,10 +87,10 @@ export default class Blog {
     const file = fs.createWriteStream(path);
 
     return new Promise((resolve, reject) => {
-      file.on('error', reject);
+      file.on("error", reject);
 
       formFile.pipe(file);
-      formFile.on('end', () => resolve(path));
+      formFile.on("end", () => resolve(path));
     });
   }
 }

@@ -2,15 +2,14 @@
 // --- Nils Hartmann | http://nilshartmann.net                             ---
 // ---------------------------------------------------------------------------
 
-import React from 'react';
+import React from "react";
 
-import connectModel from '../../model/connectModel';
+import connectModel from "../../model/connectModel";
 
-import PostList from './../components/PostList';
-import NavButton from './../components/NavButton';
+import PostList from "./../components/PostList";
+import NavButton from "./../components/NavButton";
 
 class AllPostsPage extends React.Component {
-
   componentDidMount() {
     const { loadPosts } = this.props;
 
@@ -19,15 +18,17 @@ class AllPostsPage extends React.Component {
 
   render() {
     const { posts } = this.props;
-    return <div>
-      <PostList posts={posts} />
+    return (
+      <div>
+        <PostList posts={posts} />
 
-      <div className='Row Narrow'>
-        <div className='NavBar Center'>
-          <NavButton url='/' label='Home'/>
+        <div className="Row Narrow">
+          <div className="NavBar Center">
+            <NavButton url="/" label="Home" />
+          </div>
         </div>
       </div>
-    </div>;
+    );
   }
 }
 

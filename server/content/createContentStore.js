@@ -1,37 +1,33 @@
-import path from 'path';
-import fs from 'fs';
+import path from "path";
+import fs from "fs";
 
-import MarkdownRenderer from '../util/MarkdownRenderer';
+import MarkdownRenderer from "../util/MarkdownRenderer";
 
-import NodeGit from 'nodegit';
+import NodeGit from "nodegit";
 
-import sanitize from 'sanitize-filename';
+import sanitize from "sanitize-filename";
 
-const PUBLIC_FOLDER = 'public';
-const DRAFTS_FOLDER = 'drafts';
-const UPLOADS_FOLDER = 'uploads';
+const PUBLIC_FOLDER = "public";
+const DRAFTS_FOLDER = "drafts";
+const UPLOADS_FOLDER = "uploads";
 
 function listJsonFiles(dir) {
   return new Promise((resolve, reject) => {
-    console.log('Reading files from ' + dir);
+    console.log("Reading files from " + dir);
 
     fs.readdir(dir, (err, files) => {
       if (err) {
         return reject(err);
       }
 
-      return resolve(
-        files
-          .filter(file => file.endsWith('.json'))
-          .map(file => `${dir}${path.sep}${file}`)
-        );
+      return resolve(files.filter(file => file.endsWith(".json")).map(file => `${dir}${path.sep}${file}`));
     });
   });
 }
 
 function readFile(file) {
   return new Promise((resolve, reject) => {
-    fs.readFile(file, 'utf-8', (err, content) => {
+    fs.readFile(file, "utf-8", (err, content) => {
       if (err) {
         return reject(err);
       }
@@ -44,12 +40,13 @@ function readFile(file) {
 function writeFile(absDir, content) {
   return new Promise((resolve, reject) => {
     fs.writeFile(absDir, JSON.stringify(content, null, 2), err => {
-      if (err) { return reject(err); }
+      if (err) {
+        return reject(err);
+      }
       resolve(absDir);
     });
   });
 }
-
 
 function readFiles(files) {
   return Promise.all(files.map(file => readFile(file)));
@@ -61,7 +58,7 @@ function convertToPosts(contents) {
     post._summaryHtml = MarkdownRenderer.render(post.summary);
     post._contentHtml = MarkdownRenderer.render(post.content);
     const date = new Date(post.publish_time);
-    post._date = `${date.getDate() }.${date.getMonth() + 1}.${date.getFullYear() }`;
+    post._date = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
 
     return post;
   });
@@ -73,7 +70,7 @@ function orderPostsByDate(posts) {
 }
 
 function ensureExistingDirectory(dir) {
-  if (typeof dir !== 'string') {
+  if (typeof dir !== "string") {
     throw new Error('Parameter "dir" must be a string');
   }
 
@@ -131,26 +128,22 @@ function createContentStore(dir) {
   ensureExistingDirectory(dir);
 
   function readPosts() {
-    return Promise.resolve(dir)
-      .then(listJsonFiles)
-      .then(readFiles)
-      .then(convertToPosts)
-      .then(orderPostsByDate)
-      .catch(err => { console.error(err); return null; });
+    return Promise.resolve(dir).then(listJsonFiles).then(readFiles).then(convertToPosts).then(orderPostsByDate).catch(err => {
+      console.error(err);
+      return null;
+    });
   }
 
   return {
     readPosts
-  }
+  };
 }
-
 
 export function createPublicContentStore(dir) {
   ensureExistingDirectory(dir);
 
   return createContentStore(path.join(dir, PUBLIC_FOLDER));
 }
-
 
 export function createWritableContentStore(dir) {
   const draftsDir = path.join(dir, DRAFTS_FOLDER);
@@ -160,7 +153,7 @@ export function createWritableContentStore(dir) {
 
   ensureExistingDirectory(publicDir);
   ensureExistingDirectory(uploadsDir);
-  ensureExistingDirectory(path.join(dir, '.git'));
+  ensureExistingDirectory(path.join(dir, ".git"));
 
   function notifyListener() {
     listener.forEach(listener => listener());
@@ -171,44 +164,43 @@ export function createWritableContentStore(dir) {
   }
 
   function commit(fileOrFiles, commitMsg) {
-    console.log('COMMITTE: ', fileOrFiles);
+    console.log("COMMITTE: ", fileOrFiles);
     const files = Array.isArray(fileOrFiles) ? fileOrFiles : [fileOrFiles];
-    return NodeGit.Repository.open(dir)
-			.then(repo => {
-				let index;
-				return repo.refreshIndex().then(indexResult => {
-					index = indexResult;
-					const addPromises = files.map(file => {
-						const f = file.replace('\\', '/');
-						return index.addByPath(f)
-							.then(addRes => { if (addRes) { throw new Error(`Failed to commit '${file}': ${addRes}`); } else return addRes; });
-					});
-					return Promise.all(addPromises)
-						.then(() => index.write())
-						.then(() => index.writeTree())
-        }).then(oid => {
-          return NodeGit.Reference.nameToId(repo, "HEAD")
-            .then(head => repo.getCommit(head))
-            .then(parent => {
-              const author = NodeGit.Signature.now(
-                "Nils Hartmann",
-                "nils@nilshartmann.net"
-                );
-
-              return repo.createCommit("HEAD", author, author, `${commitMsg} ${files.join() }`, oid, [parent])
-                .then(() => fileOrFiles)
-            })
+    return NodeGit.Repository.open(dir).then(repo => {
+      let index;
+      return repo
+        .refreshIndex()
+        .then(indexResult => {
+          index = indexResult;
+          const addPromises = files.map(file => {
+            const f = file.replace("\\", "/");
+            return index.addByPath(f).then(addRes => {
+              if (addRes) {
+                throw new Error(`Failed to commit '${file}': ${addRes}`);
+              } else return addRes;
+            });
+          });
+          return Promise.all(addPromises).then(() => index.write()).then(() => index.writeTree());
         })
-      });
+        .then(oid => {
+          return NodeGit.Reference.nameToId(repo, "HEAD").then(head => repo.getCommit(head)).then(parent => {
+            const author = NodeGit.Signature.now("Nils Hartmann", "nils@nilshartmann.net");
+
+            return repo
+              .createCommit("HEAD", author, author, `${commitMsg} ${files.join()}`, oid, [parent])
+              .then(() => fileOrFiles);
+          });
+        });
+    });
   }
 
   function storeDraft(post) {
     if (!post.slug) {
-      throw new Error('Missing slug property');
+      throw new Error("Missing slug property");
     }
     const draftPost = {};
     Object.keys(post).forEach(key => {
-      if (!key.startsWith('_')) {
+      if (!key.startsWith("_")) {
         draftPost[key] = post[key];
       }
     });
@@ -217,9 +209,7 @@ export function createWritableContentStore(dir) {
     const relPath = path.join(DRAFTS_FOLDER, `${post.slug}.json`);
     const postPath = path.join(dir, relPath);
 
-    return writeFile(postPath, draftPost)
-      .then(() => commit(relPath, 'Store Draft'))
-      .then(() => draftPost);
+    return writeFile(postPath, draftPost).then(() => commit(relPath, "Store Draft")).then(() => draftPost);
   }
 
   function publishPost(slug) {
@@ -228,10 +218,7 @@ export function createWritableContentStore(dir) {
     }
     const fileName = `${slug}.json`;
     const draftPostPath = path.join(DRAFTS_FOLDER, fileName);
-    const relPaths = [
-      draftPostPath,
-      path.join(PUBLIC_FOLDER, fileName)
-    ];
+    const relPaths = [draftPostPath, path.join(PUBLIC_FOLDER, fileName)];
 
     const postPath = path.join(dir, draftPostPath);
     return readFile(postPath)
@@ -241,13 +228,16 @@ export function createWritableContentStore(dir) {
         return Promise.all([
           writeFile(postPath, publishedPost),
           writeFile(path.join(dir, PUBLIC_FOLDER, fileName), publishedPost)
-        ])
+        ]);
       })
-      .then(() => commit(relPaths, 'Publish Post'))
-      .then(commitResult => { notifyListener(); return commitResult; });
+      .then(() => commit(relPaths, "Publish Post"))
+      .then(commitResult => {
+        notifyListener();
+        return commitResult;
+      });
   }
 
- function storeUpload(payload, fileName, formFile) {
+  function storeUpload(payload, fileName, formFile) {
     const name = sanitize(fileName);
     const relPath = path.join(UPLOADS_FOLDER, `${Date.now()}_${name}`);
     console.log(`Uploading to ${relPath}`);
@@ -256,37 +246,39 @@ export function createWritableContentStore(dir) {
     const file = fs.createWriteStream(uploadPath);
 
     return new Promise((resolve, reject) => {
-      file.on('error', reject);
+      file.on("error", reject);
 
       formFile.pipe(file);
-      formFile.on('end', () => resolve(path));
-    }).then(() => commit(relPath, 'Store Upload'));
+      formFile.on("end", () => resolve(path));
+    }).then(() => commit(relPath, "Store Upload"));
   }
 
   function listUploadedFiles() {
-
     return new Promise((resolve, reject) => {
-    console.log('Reading files from ' + dir);
+      console.log("Reading files from " + dir);
 
-    fs.readdir(uploadsDir, (err, files) => {
-      if (err) {
-        return reject(err);
-      }
+      fs.readdir(uploadsDir, (err, files) => {
+        if (err) {
+          return reject(err);
+        }
 
-      return resolve(files);
-    });
-  })
-  .then(files => files.map(file => ({mtime: fs.statSync(path.join(uploadsDir, file)).mtime, file: path.join(UPLOADS_FOLDER, file)})))
-  .then(files => files.sort((a, b) => b.mtime.getTime() - a.mtime.getTime()))
-  .then(orderedFiles => orderedFiles.map(file => ({ file: file.file })));
-}
+        return resolve(files);
+      });
+    })
+      .then(files =>
+        files.map(file => ({
+          mtime: fs.statSync(path.join(uploadsDir, file)).mtime,
+          file: path.join(UPLOADS_FOLDER, file)
+        }))
+      )
+      .then(files => files.sort((a, b) => b.mtime.getTime() - a.mtime.getTime()))
+      .then(orderedFiles => orderedFiles.map(file => ({ file: file.file })));
+  }
 
   function unpublish(slug) {
     // remove from public
     // in draft set to unpublished
-
   }
-
 
   return Object.assign({}, createContentStore(draftsDir), {
     onChange,
@@ -307,20 +299,21 @@ export function createConfiguredStores(baseDir) {
 
     readPosts() {
       if (cachedPublicContentStore.cachedPosts) {
-        console.log('return from cache');
-        return Promise.resolve(cachedPublicContentStore.cachedPosts)
+        console.log("return from cache");
+        return Promise.resolve(cachedPublicContentStore.cachedPosts);
       }
-      return publicContentStore.readPosts()
-        .then(posts => { cachedPublicContentStore.cachedPosts = posts; return posts;});
+      return publicContentStore.readPosts().then(posts => {
+        cachedPublicContentStore.cachedPosts = posts;
+        return posts;
+      });
     }
-  }
+  };
 
   const writableContentStore = createWritableContentStore(baseDir);
-  writableContentStore.onChange(()=>cachedPublicContentStore.clearCache());
+  writableContentStore.onChange(() => cachedPublicContentStore.clearCache());
 
   return {
     publicContentStore: cachedPublicContentStore,
     writableContentStore
   };
 }
-

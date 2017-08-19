@@ -2,7 +2,7 @@
 // --- Nils Hartmann | http://nilshartmann.net                             ---
 // ---------------------------------------------------------------------------
 
-import React from 'react';
+import React from "react";
 
 export default class FlickrBar extends React.Component {
   render() {
@@ -10,11 +10,14 @@ export default class FlickrBar extends React.Component {
     if (!flickrImages) {
       return false;
     }
-    return <div className='FlickrBar'>
-      {flickrImages.map(photo =>
-         <a key={photo.id} href={photo.flickrUrl} target='_blank'><img src={photo.imgUrl}
-                                                                             title={photo.title}/></a>
-      )}
-    </div>;
+    return (
+      <div className="FlickrBar">
+        {flickrImages.map(photo =>
+          <a key={photo.id} href={photo.flickrUrl} target="_blank">
+            <img src={photo.imgUrl} title={photo.title} />
+          </a>
+        )}
+      </div>
+    );
   }
 }

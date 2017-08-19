@@ -1,13 +1,12 @@
-import React, { Children } from 'react';
+import React, { Children } from "react";
 
-export const ModelShape =  React.PropTypes.shape({
-   subscribe: React.PropTypes.func.isRequired,
-   actions: React.PropTypes.object.isRequired,
-   getState: React.PropTypes.func.isRequired
+export const ModelShape = React.PropTypes.shape({
+  subscribe: React.PropTypes.func.isRequired,
+  actions: React.PropTypes.object.isRequired,
+  getState: React.PropTypes.func.isRequired
 });
 
 export default class ModelProvider extends React.Component {
-
   static propTypes = {
     model: React.PropTypes.object.isRequired,
     children: React.PropTypes.element.isRequired
@@ -15,7 +14,7 @@ export default class ModelProvider extends React.Component {
 
   static childContextTypes = {
     model: React.PropTypes.object.isRequired
-  }
+  };
 
   constructor(props, context) {
     super(props, context);
@@ -23,10 +22,10 @@ export default class ModelProvider extends React.Component {
   }
 
   getChildContext() {
-    return { model: this.model }
+    return { model: this.model };
   }
 
-render() {
+  render() {
     const { children } = this.props;
     return Children.only(children);
   }

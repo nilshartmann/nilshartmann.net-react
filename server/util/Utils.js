@@ -2,8 +2,8 @@
 // --- Nils Hartmann | http://nilshartmann.net                             ---
 // ---------------------------------------------------------------------------
 
-import _  from 'lodash';
-import util from 'util';
+import _ from "lodash";
+import util from "util";
 
 export function ensureDefined(name, value) {
   if (_.isNull(value) || _.isUndefined(value)) {
@@ -43,11 +43,13 @@ export function isArray(value) {
 
 export function explodePlaceholder(array, offset = 1) {
   if (!isArray(array)) {
-    return '';
+    return "";
   }
-  return array.map((name, i) => {
-    return '$' + (i + offset);
-  }).join(',');
+  return array
+    .map((name, i) => {
+      return "$" + (i + offset);
+    })
+    .join(",");
 }
 
 export function format(value) {

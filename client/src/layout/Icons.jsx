@@ -2,5 +2,4 @@
 // --- Nils Hartmann | http://nilshartmann.net                             ---
 // ---------------------------------------------------------------------------
 
-import React from 'react';
-
+import React from "react";
