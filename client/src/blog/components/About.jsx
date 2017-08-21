@@ -51,7 +51,7 @@ export default function About({ flickrImages }) {
               <a href="https://2017.javazone.no/program/5ddf7fcd3cdd41d78091f0677eb4eec0" target="_blank">
                 {" "}Overview of current (JavaScript) frontend architectures
               </a>{" "}
-              (JavaZone, Oslo, September 2017)
+              (JavaZone, Oslo, 13. September 2017)
             </li>
             <li>
               <a
@@ -61,6 +61,12 @@ export default function About({ flickrImages }) {
                 Rethinking Best Practices – Moderne Web-Anwendungen mit React entwickeln
               </a>{" "}
               (BedCon, Berlin, 22. September 2017)
+            </li>
+            <li>
+              <a href="https://www.meetup.com/de-DE/Hamburg-Web-Performance-Group/events/241264722/" target="_blank">
+                React Performance
+              </a>{" "}
+              (Web Performance Meetup, Hamburg, 4. Oktober 2017)
             </li>
             <li>
               <a href="https://www.oose.de/abendvortrag/single-page-anwendungen-mit-react/" target="_blank">
