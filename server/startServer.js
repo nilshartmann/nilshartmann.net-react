@@ -169,62 +169,6 @@ export function startServer(config) {
     });
   }
 
-  // console.log('Enable Hot server...');
-  // const x = require('./devServerHapi').setup(server, publicPath);
-
-  // ---------------------------------------------------------------------------------------------------------------
-  // -- Configure Webserver routes for static content and browser history routes on client
-  // ---------------------------------------------------------------------------------------------------------------
-  // if (config.staticPath) {
-  //   console.log(`Serving static files from ${config.staticPath}`);
-  //   console.log(`index html: ${config.indexHtml}`);
-
-  //   // try to find static resource on file system
-  //   server.route({
-  //     method:  'GET',
-  //     path:    '/{param*}',
-  //     handler: {
-  //       directory: {
-  //         path: config.staticPath
-  //       }
-  //     }
-  //   });
-
-  //   // Needed for browserHistory on client => all these paths are handled by React Router on client
-  //   // so just return index.html for each of those
-  //   const CLIENT_PATHS = [
-  //     '/',
-  //     '/index.html',
-  //     '/posts/{param*}',
-  //     '/tags/{param*}',
-  //     '/pages/{param*}'
-  //   ];
-
-  //   CLIENT_PATHS.forEach(path => {
-  //     server.route({
-  //       method:  'GET',
-  //       path,
-  //       handler: (request, reply) => reply(config.indexHtml)
-  //     });
-  //   });
-
-  //   if (config.enableWriteAccess) {
-  //     console.log(' Enabling write access routes');
-
-  //     server.route({
-  //       method:  'GET',
-  //       path:    '/upload',
-  //       handler: (request, reply) => reply(config.indexHtml)
-  //     });
-
-  //     server.route({
-  //       method:  'GET',
-  //       path:    '/edit/{param*}',
-  //       handler: (request, reply) => reply(config.indexHtml)
-  //     });
-  //   }
-  // }
-
   console.log(`About to start server...`);
   return server.start().then(() => server);
 }
