@@ -16,9 +16,7 @@ function PostTeaser({ post, pushLocation }) {
       <div className="TitlePanel Clearfix">
         {image}
         {post._date}
-        <h1 className="Title">
-          {post.title}
-        </h1>
+        <h1 className="Title">{post.title}</h1>
       </div>
       <p>
         <span dangerouslySetInnerHTML={{ __html: post._summaryHtml }} />&nbsp;<Link className="ReadMore" to={postUrl}>
@@ -28,10 +26,5 @@ function PostTeaser({ post, pushLocation }) {
     </div>
   );
 }
-
-PostTeaser.propTypes = {
-  post: React.PropTypes.object.isRequired,
-  pushLocation: React.PropTypes.func.isRequired
-};
 
 export default connectModel(PostTeaser, null, ({ pushLocation }) => ({ pushLocation }));

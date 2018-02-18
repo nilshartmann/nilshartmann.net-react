@@ -39,9 +39,7 @@ class Layout extends React.Component {
         </div>
         <div className={mainClassNames}>
           <div className="Clearfix">
-            <div className="Container">
-              {children}
-            </div>
+            <div className="Container">{children}</div>
 
             <div className="Sidebar">
               <div className="Section">
@@ -120,13 +118,6 @@ class Layout extends React.Component {
     );
   }
 }
-Layout.propTypes = {
-  children: React.PropTypes.any,
-  authorization: React.PropTypes.string,
-  location: React.PropTypes.object.isRequired,
-  logout: React.PropTypes.func.isRequired,
-  newPost: React.PropTypes.func.isRequired
-};
 
 const w = connectModel(
   Layout,

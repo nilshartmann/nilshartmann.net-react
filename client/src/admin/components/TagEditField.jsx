@@ -5,11 +5,6 @@
 import React from "react";
 
 export default class TagEditField extends React.Component {
-  static propTypes = {
-    availableTags: React.PropTypes.array.isRequired,
-    onTag: React.PropTypes.func.isRequired
-  };
-
   constructor(props) {
     super(props);
 

@@ -7,10 +7,6 @@ import { history } from "../../util/Frontend";
 import connectModelState from "../../model/connectModel";
 
 class LoginPage extends React.Component {
-  static propTypes = {
-    login: React.PropTypes.func.isRequired
-  };
-
   constructor(props) {
     super(props);
     this.state = {};
@@ -41,9 +37,7 @@ class LoginPage extends React.Component {
         <button enabled={loginEnabled} onClick={() => this.onDoLogin()}>
           Login
         </button>
-        <div>
-          {this.state.message}
-        </div>
+        <div>{this.state.message}</div>
       </div>
     );
   }

@@ -47,11 +47,6 @@ class TagListPage extends React.Component {
     );
   }
 }
-TagListPage.propTypes = {
-  loadTags: React.PropTypes.func.isRequired,
-  tags: React.PropTypes.array,
-  levels: React.PropTypes.number
-};
 
 TagListPage.defaultProps = {
   levels: 3

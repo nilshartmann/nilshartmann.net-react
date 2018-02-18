@@ -1,10 +1,6 @@
 import React from "react";
 
 export default class SocialIcons extends React.Component {
-  static propTypes = {
-    icons: React.PropTypes.array
-  };
-
   static defaultProps = {
     icons: [
       {

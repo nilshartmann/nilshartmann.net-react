@@ -11,15 +11,6 @@ import AdminLinks from "../components/AdminLinks";
 import connectModel from "../../model/connectModel";
 
 class FullPostPage extends React.Component {
-  static propTypes = {
-    post: React.PropTypes.object,
-    loadPostError: React.PropTypes.string,
-    loadPost: React.PropTypes.func.isRequired,
-    publishPost: React.PropTypes.func.isRequired,
-    editPost: React.PropTypes.func.isRequired,
-    routeParams: React.PropTypes.object.isRequired
-  };
-
   componentDidMount() {
     const { loadPost, routeParams } = this.props;
     loadPost(routeParams.slug);
@@ -37,11 +28,7 @@ class FullPostPage extends React.Component {
   render() {
     const { post, loadPostError, loggedIn, editPost, publishPost } = this.props;
     if (loadPostError) {
-      return (
-        <h1>
-          {loadPostError}
-        </h1>
-      );
+      return <h1>{loadPostError}</h1>;
     }
 
     if (!post) {

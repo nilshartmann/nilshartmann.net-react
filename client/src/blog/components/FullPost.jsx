@@ -8,12 +8,7 @@ import { tagUrl } from "./../../util/Frontend";
 import Button from "./Button";
 
 export default class FullPost extends React.Component {
-  static propTypes = {
-    post: React.PropTypes.object.isRequired,
-    loggedIn: React.PropTypes.bool
-  };
-
-  defaultProps = {
+  static defaultProps = {
     loggedIn: false
   };
 
@@ -64,13 +59,9 @@ export default class FullPost extends React.Component {
 
     return (
       <div className="Row FullPost">
-        <p className="Date">
-          {post._date}
-        </p>
+        <p className="Date">{post._date}</p>
 
-        <h1 className="Title">
-          {post.title}
-        </h1>
+        <h1 className="Title">{post.title}</h1>
 
         <div>
           {this.renderPostImage(post)}

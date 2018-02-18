@@ -35,12 +35,6 @@ class PostEditorPage extends React.Component {
   }
 }
 
-PostEditorPage.propTypes = {
-  params: React.PropTypes.object.isRequired,
-  post: React.PropTypes.object,
-  loadPost: React.PropTypes.func.isRequired
-};
-
 export default connectModel(
   PostEditorPage,
   ({ post, tags }) => ({ post, tags }),

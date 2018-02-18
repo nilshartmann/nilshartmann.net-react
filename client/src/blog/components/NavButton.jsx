@@ -18,11 +18,7 @@ export default class NavButton extends React.Component {
     const iconOrLabel = this.props.icon ? <i className={`fa fa-${this.props.icon} fa-${this.props.scale}`} /> : this.props.label;
 
     if (!this.props.url) {
-      return (
-        <div className="NavButton Disabled">
-          {iconOrLabel}
-        </div>
-      );
+      return <div className="NavButton Disabled">{iconOrLabel}</div>;
     }
 
     if (this.props.url === BACK) {
@@ -42,14 +38,6 @@ export default class NavButton extends React.Component {
 }
 
 NavButton.BACK = BACK;
-
-NavButton.propTypes = {
-  icon: React.PropTypes.string,
-  scale: React.PropTypes.string,
-  url: React.PropTypes.any,
-  label: React.PropTypes.string,
-  title: React.PropTypes.string
-};
 
 NavButton.defaultProps = {
   scale: "2x"

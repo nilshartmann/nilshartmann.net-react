@@ -16,8 +16,3 @@ export default function Button({ onClick, linkTo, children }) {
     </Link>
   );
 }
-Button.propTypes = {
-  linkTo: React.PropTypes.string,
-  onClick: React.PropTypes.func,
-  children: React.PropTypes.any
-};

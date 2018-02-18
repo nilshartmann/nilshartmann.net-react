@@ -12,13 +12,11 @@ import TextInputField from "./TextInputField";
 import TagEditField from "./TagEditField";
 import FullPost from "../../blog/components/FullPost";
 
-marked.setOptions(
-  {
-    // highlight(code) {
-    //   return highlightJs.highlightAuto(code).value;
-    // }
-  }
-);
+marked.setOptions({
+  // highlight(code) {
+  //   return highlightJs.highlightAuto(code).value;
+  // }
+});
 
 function emptyPost() {
   const currentDate = new Date();
@@ -238,11 +236,7 @@ export default class PostEditor extends React.Component {
             <div className="EditorGroup">
               <Button onClick={this.save}>Save</Button>
             </div>
-            {feedbackMessage
-              ? <div className={`Alert ${feedbackMessage.status}`}>
-                  {feedbackMessage.message}
-                </div>
-              : null}
+            {feedbackMessage ? <div className={`Alert ${feedbackMessage.status}`}>{feedbackMessage.message}</div> : null}
           </div>
         </div>
         <div className="Column-2">
@@ -252,10 +246,3 @@ export default class PostEditor extends React.Component {
     );
   }
 }
-
-PostEditor.propTypes = {
-  post: React.PropTypes.object,
-  tags: React.PropTypes.array,
-  savePost: React.PropTypes.func.isRequired,
-  loadTags: React.PropTypes.func.isRequired
-};
