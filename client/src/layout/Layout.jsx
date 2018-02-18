@@ -67,26 +67,39 @@ class Layout extends React.Component {
               <div className="Section">
                 <h1 className="Title">Talks und Workshops</h1>
                 <div className="Image">
-                  <img src="/uploads/1498426480105_wjax_logo_navi.png" alt="W-Jax 2017" />
                   <p>
-                    <b>München, November 2017</b>
+                    <b>Voxxed Days Wien, März 2018</b>
                   </p>
                   <p style={{ marginBottom: "0.5em" }}>
                     <a
                       className="ReadMore"
-                      href="https://jax.de/web-development-javascript/react-und-typescript-workshop-moderne-webanwendungen-entwickeln/"
+                      href="https://voxxeddaysvienna2018.sched.com/event/Dl01/lets-type-a-practical-introduction-to-typescript-for-java-developers"
                       target="_blank"
                     >
-                      Moderne Webanwendungen mit React und TypeScript entwickeln (Workshop, 1 Tag)
+                      Let's type! A practical introdution to TypeScript
                     </a>
                   </p>
+                </div>
+                <div className="Image">
                   <p>
+                    <b>Jax Mainz, April 2018</b>
+                  </p>
+                  <p style={{ marginBottom: "0.5em" }}>
                     <a
                       className="ReadMore"
-                      href="https://jax.de/web-development-javascript/das-javascript-oekosystem-orientierungshilfen/"
+                      href="https://jax.de/web-development-javascript/lets-type-eine-praktische-einfuehrung-in-typescript/"
                       target="_blank"
                     >
-                      Das JavaScript-Ökosystem: Orientierungshilfen
+                      Let's type - eine praktische Einführung in TypeScript
+                    </a>
+                  </p>
+                  <p style={{ marginBottom: "0.5em" }}>
+                    <a
+                      className="ReadMore"
+                      href="https://jax.de/web-development-javascript/react-in-enterprise-anwendungen/"
+                      target="_blank"
+                    >
+                      React in Enterprise Anwendungen
                     </a>
                   </p>
                 </div>
