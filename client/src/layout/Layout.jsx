@@ -124,7 +124,8 @@ class Layout extends React.Component {
             </div>
           </div>
           <div className="Footer">
-            <Link to="/pages/impressum">Impressum</Link>
+            <Link to="/pages/impressum">Impressum</Link>&nbsp;|&nbsp;
+            <Link to="/pages/datenschutzerklaerung">Datenschutzerklärung</Link>
           </div>
         </div>
       </div>

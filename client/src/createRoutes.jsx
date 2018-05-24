@@ -13,6 +13,7 @@ import UploadForm from "./admin/pages/UploadForm";
 import LoginPage from "./admin/pages/LoginPage";
 import ImpressumPage from "./layout/ImpressumPage";
 import PostEditorPage from "./admin/pages/PostEditorPage";
+import PrivacyPage from "./layout/PrivacyPage";
 
 export default function createRoutes(model) {
   function requireAuth(nextState, replace) {
@@ -31,6 +32,7 @@ export default function createRoutes(model) {
       <Route path="/tags" component={TagListPage} />
       <Route path="/tags/:tag" component={PostListWithTagPage} />
       <Route path="/pages/impressum" component={ImpressumPage} />
+      <Route path="/pages/datenschutzerklaerung" component={PrivacyPage} />
 
       <Route path="/login" component={LoginPage} />
       <Route path="/login/*" component={LoginPage} />
