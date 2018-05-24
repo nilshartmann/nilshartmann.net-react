@@ -50,28 +50,28 @@ export default function About({ flickrImages }) {
         <ul style={ulStyle}>
           <li>
             <a
-              href="https://voxxeddaysvienna2018.sched.com/event/Dl01/lets-type-a-practical-introduction-to-typescript-for-java-developers"
+              href="https://www.enterjs.de/single?id=6713&apollo-client-2.0%3A-graphql-als-state-management-werkzeug-f%C3%BCr-react"
               target="_blank"
             >
               {" "}
-              Let's Type! A practical introduction to TypeScript for Java developers
+              Apollo Client 2.0: GraphQL als State-Management-Werkzeug für React?
             </a>{" "}
-            (Voxxed Days Vienna, Wien, 13. März 2018)
+            (EnterJS, Darmstadt Juni 2018)
+          </li>
+          <li>
+            <a href="https://www.enterjs.de/single?id=6446%C2%B5-frontends%3A-javascript-integration-patterns" target="_blank">
+              Micro Frontends: JavaScript Integration Patterns
+            </a>{" "}
+            (EnterJS, Darmstadt Juni 2018)
           </li>
           <li>
             <a
-              href="https://jax.de/web-development-javascript/lets-type-eine-praktische-einfuehrung-in-typescript/"
+              href="https://jax.de/web-development-javascript/react-2018-context-api-suspense-time-slicing-und-mehr/"
               target="_blank"
             >
-              Let's type! Eine praktische Einführung in TypeScript
+              React 2018: Context API, Suspense, Time Slicing und mehr
             </a>{" "}
-            (Jax, Mainz, 26. April 2018)
-          </li>
-          <li>
-            <a href="https://jax.de/web-development-javascript/react-in-enterprise-anwendungen/" target="_blank">
-              React in Enterprise-Anwendungen
-            </a>{" "}
-            (Jax, Mainz, 26. April 2018)
+            (W-JAX München, November 2018)
           </li>
         </ul>
       </div>

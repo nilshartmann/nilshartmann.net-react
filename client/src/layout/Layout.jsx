@@ -68,38 +68,39 @@ class Layout extends React.Component {
                 <h1 className="Title">Talks und Workshops</h1>
                 <div className="Image">
                   <p>
-                    <b>Voxxed Days Wien, März 2018</b>
+                    <b>EnterJS, Juni 2018</b>
                   </p>
                   <p style={{ marginBottom: "0.5em" }}>
                     <a
                       className="ReadMore"
-                      href="https://voxxeddaysvienna2018.sched.com/event/Dl01/lets-type-a-practical-introduction-to-typescript-for-java-developers"
+                      href="https://www.enterjs.de/single?id=6446%C2%B5-frontends%3A-javascript-integration-patterns"
                       target="_blank"
                     >
-                      Let's type! A practical introdution to TypeScript
+                      Micro Frontends: JavaScript Integration Patterns
+                    </a>
+                  </p>
+                  <p style={{ marginBottom: "0.5em" }}>
+                    <a
+                      className="ReadMore"
+                      href="https://www.enterjs.de/single?id=6713&apollo-client-2.0%3A-graphql-als-state-management-werkzeug-f%C3%BCr-react"
+                      target="_blank"
+                    >
+                      Apollo Client 2.0: GraphQL als State-Management-Werkzeug für React?
                     </a>
                   </p>
                 </div>
                 <div className="Image">
                   <p>
-                    <b>Jax Mainz, April 2018</b>
+                    <b>W-JAX München, November 2018</b>
                   </p>
+
                   <p style={{ marginBottom: "0.5em" }}>
                     <a
                       className="ReadMore"
-                      href="https://jax.de/web-development-javascript/lets-type-eine-praktische-einfuehrung-in-typescript/"
+                      href="https://jax.de/web-development-javascript/react-2018-context-api-suspense-time-slicing-und-mehr/"
                       target="_blank"
                     >
-                      Let's type - eine praktische Einführung in TypeScript
-                    </a>
-                  </p>
-                  <p style={{ marginBottom: "0.5em" }}>
-                    <a
-                      className="ReadMore"
-                      href="https://jax.de/web-development-javascript/react-in-enterprise-anwendungen/"
-                      target="_blank"
-                    >
-                      React in Enterprise Anwendungen
+                      React 2018: Context API, Suspense, Time Slicing und mehr
                     </a>
                   </p>
                 </div>
