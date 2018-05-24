@@ -37,7 +37,7 @@
     "lodash": "^3.10.1",
     "marked": "0.3.9",
     "mkdirp": "^0.5.1",
-    "moment": "2.11.2",
+    "moment": "2.19.3",
     "nodegit": "^0.20.3",
     "normalize.css": "^3.0.3",
     "prop-types": "^15.6.0",
