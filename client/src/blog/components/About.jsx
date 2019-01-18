@@ -49,29 +49,29 @@ export default function About({ flickrImages }) {
         </p>
         <ul style={ulStyle}>
           <li>
-            <a
-              href="https://www.enterjs.de/single?id=6713&apollo-client-2.0%3A-graphql-als-state-management-werkzeug-f%C3%BCr-react"
-              target="_blank"
-            >
+            <a href="https://www.oose.de/abendvortrag/neues-jahr-alles-neu-in-react/" target="_blank">
+              Neues Jahr, alles neu in React?
+            </a>{" "}
+            (OOSE Abendveranstaltung, Hamburg, Januar 2019)
+          </li>
+          <li>
+            <a href="https://jax.de/serverside-enterprise-java/graphql-fuer-java-anwendungen/" target="_blank">
               {" "}
-              Apollo Client 2.0: GraphQL als State-Management-Werkzeug für React?
+              GraphQL für Java Anwendungen
             </a>{" "}
-            (EnterJS, Darmstadt Juni 2018)
+            (JAX, Mainz, Mai 2019)
           </li>
           <li>
-            <a href="https://www.enterjs.de/single?id=6446%C2%B5-frontends%3A-javascript-integration-patterns" target="_blank">
-              Micro Frontends: JavaScript Integration Patterns
+            <a href="https://jax.de/web-development-javascript/moderne-frontend-architektur-mit-javascript/" target="_blank">
+              Moderne Frontend-Architektur mit JavaScript
             </a>{" "}
-            (EnterJS, Darmstadt Juni 2018)
+            (Mit Oliver Zeigermann, JAX, Mainz, Mai 2019)
           </li>
           <li>
-            <a
-              href="https://jax.de/web-development-javascript/react-2018-context-api-suspense-time-slicing-und-mehr/"
-              target="_blank"
-            >
-              React 2018: Context API, Suspense, Time Slicing und mehr
+            <a href="https://www.md-devdays.de/Act?id=1000027" target="_blank">
+              Modernes React
             </a>{" "}
-            (W-JAX München, November 2018)
+            (Magdeburger Developer Days, Mai 2019)
           </li>
         </ul>
       </div>
