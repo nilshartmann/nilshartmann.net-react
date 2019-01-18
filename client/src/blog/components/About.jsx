@@ -31,18 +31,19 @@ export default function About({ flickrImages }) {
         <div className="TitlePanel Title ">Willkommen!</div>
 
         <p style={pStyle}>
-          <img style={imgStyle} src="/uploads/nh.jpg" />Ich bin Nils Hartmann, Softwareentwickler und -Architekt aus Hamburg und
-          beschäftige mich mit <b>JavaScript</b> (insbesondere <b>React</b>, Redux, GraphQL und <b>TypeScript</b>). 2016 habe ich
-          ein{" "}
+          <img style={imgStyle} src="/uploads/nh.jpg" />Ich bin Nils Hartmann, freiberuftlicher Softwareentwickler und -Architekt
+          aus Hamburg und beschäftige mich mit <b>Java</b> und <b>JavaScript</b> (insbesondere <b>React</b>, Redux, GraphQL und{" "}
+          <b>TypeScript</b>). 2016 habe ich ein{" "}
           <a href="/posts/react-buch-erschienen">
             <b>Buch über React</b>
           </a>{" "}
           veröffentlicht.
         </p>
         <p style={pStyle}>
-          Rund um das Thema React und JavaScript biete ich individuelle <b>Trainings und Workshops</b> (auch In-House) an. Da ich
-          auch langjährige Java-Erfahrung habe, kann ich auch bei der Umstellung von Java auf JavaScript behilflich sein. Wenn Du
-          Interesse hast, schreibe mir doch einfach eine <a href="mailto:nils@nilshartmann.net">E-Mail</a>.
+          Ich unterstütze dich gerne in deinem Projekt, sei es beim Programmieren, in Architektur-Fragen oder zum Beispiel
+          gemeinsame Code-Reviews (auch Remote). Rund um die Thema React, JavaScript, TypeScript und GraphQL biete ich
+          individuelle <b>Trainings und Workshops</b> (auch In-House) an. Wenn Du Interesse hast, schreibe mir doch einfach eine{" "}
+          <a href="mailto:nils@nilshartmann.net">E-Mail</a>.
         </p>
         <p style={pStyle}>
           Regelmäßig halte ich auch <b>Vorträge</b>:
