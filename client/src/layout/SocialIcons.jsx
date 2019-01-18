@@ -24,10 +24,6 @@ export default class SocialIcons extends React.Component {
         url: "https://www.xing.com/profile/Nils_Hartmann2"
       },
       {
-        icon: "google-plus",
-        url: "https://plus.google.com/105852364653597076711/"
-      },
-      {
         icon: "envelope",
         url: "mailto:kontakt@nilshartmann.net"
       }

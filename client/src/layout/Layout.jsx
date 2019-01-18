@@ -43,11 +43,13 @@ class Layout extends React.Component {
 
             <div className="Sidebar">
               <div className="Section">
-                <h1 className="Title">React-Workshops</h1>
+                <h1 className="Title">Mein Angebot</h1>
                 <span className="ReadMore">
-                  Gerne unterstütze ich dich und dein Team rund um das Thema JavaScript (insbesondere React, Redux und TypeScript)
-                  zum Beispiel in Form von Workshops oder Code-Reviews. Bei Interesse einfach{" "}
-                  <a href="mailto:nils@nilshartmann.net">anfragen</a>.
+                  Ich unterstütze dich gerne in deinem Projekt, sei es beim programmieren, in Architektur-Fragen oder zum Beispiel
+                  durch gemeinsame Code-Reviews (auch Remote). Rund um die Themen React, JavaScript, TypeScript und GraphQL biete
+                  ich auch individuelle <b>Trainings und Workshops</b> (auch In-House) an. Wenn Du Interesse hast, schreibe mir
+                  doch einfach eine <a href="mailto:nils@nilshartmann.net">E-Mail</a>, dann schauen wir gemeinsam, was am besten
+                  passt.
                 </span>
               </div>
               <div className="Section">
@@ -68,39 +70,39 @@ class Layout extends React.Component {
                 <h1 className="Title">Talks und Workshops</h1>
                 <div className="Image">
                   <p>
-                    <b>EnterJS, Juni 2018</b>
+                    <b>JAX, Mainz, Mai 2019</b>
                   </p>
                   <p style={{ marginBottom: "0.5em" }}>
                     <a
                       className="ReadMore"
-                      href="https://www.enterjs.de/single?id=6446%C2%B5-frontends%3A-javascript-integration-patterns"
+                      href="https://jax.de/web-development-javascript/moderne-frontend-architektur-mit-javascript/"
                       target="_blank"
                     >
-                      Micro Frontends: JavaScript Integration Patterns
+                      Moderne Frontend-Architektur mit JavaScript
                     </a>
                   </p>
                   <p style={{ marginBottom: "0.5em" }}>
                     <a
                       className="ReadMore"
-                      href="https://www.enterjs.de/single?id=6713&apollo-client-2.0%3A-graphql-als-state-management-werkzeug-f%C3%BCr-react"
+                      href="https://jax.de/serverside-enterprise-java/graphql-fuer-java-anwendungen/"
                       target="_blank"
                     >
-                      Apollo Client 2.0: GraphQL als State-Management-Werkzeug für React?
+                      GraphQL für Java Anwendungen
                     </a>
                   </p>
                 </div>
                 <div className="Image">
                   <p>
-                    <b>W-JAX München, November 2018</b>
+                    <b>Magdeburger Developer Days, Mai 2019</b>
                   </p>
-
                   <p style={{ marginBottom: "0.5em" }}>
-                    <a
-                      className="ReadMore"
-                      href="https://jax.de/web-development-javascript/react-2018-context-api-suspense-time-slicing-und-mehr/"
-                      target="_blank"
-                    >
-                      React 2018: Context API, Suspense, Time Slicing und mehr
+                    <a className="ReadMore" href="https://www.md-devdays.de/Act?id=1000027" target="_blank">
+                      Modernes React
+                    </a>
+                  </p>
+                  <p style={{ marginBottom: "0.5em" }}>
+                    <a className="ReadMore" href="https://www.md-devdays.de/Act?id=1000026" target="_blank">
+                      Einführung in GraphQL mit Java
                     </a>
                   </p>
                 </div>
@@ -111,14 +113,6 @@ class Layout extends React.Component {
                   </p>
                   <a className="ReadMore" href="https://nilshartmann.net/posts/vergangene-talks" target="_blank">
                     Übersicht über vergangene Talks
-                  </a>
-                </div>
-              </div>
-              <div className="Section">
-                <h1 className="Title">Kolumne</h1>
-                <div className="Image">
-                  <a className="ReadMore" href="https://jaxenter.de/tag/keine-angst-vor-javascript" target="_blank">
-                    <img src="/uploads/jaxenter.jpg" />Keine Angst vor JavaScript!(JaxEnter-Kolumne){" "}
                   </a>
                 </div>
               </div>
