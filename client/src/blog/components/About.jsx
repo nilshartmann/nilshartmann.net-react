@@ -32,8 +32,8 @@ export default function About({ flickrImages }) {
 
         <p style={pStyle}>
           <img style={imgStyle} src="/uploads/nh.jpg" />Ich bin Nils Hartmann, freiberuflicher Softwareentwickler und -Architekt
-          aus Hamburg und beschäftige mich mit <b>Java</b> und <b>JavaScript</b> (insbesondere <b>React</b>, Redux, GraphQL und{" "}
-          <b>TypeScript</b>). 2016 habe ich ein{" "}
+          aus Hamburg und beschäftige mich mit <b>Java</b> und <b>JavaScript/TypeScript</b> (insbesondere <b>Spring Boot</b>,{" "}
+          <b>GraphQL</b>, <b>React</b>). 2016 habe ich ein{" "}
           <a href="/posts/react-buch-erschienen">
             <b>Buch über React</b>
           </a>{" "}
@@ -58,7 +58,8 @@ export default function About({ flickrImages }) {
           <li>
             <a href="https://programm.javaland.eu/2019/#/scheduledEvent/569601" target="_blank">
               GraphQL für Java-Entwickler
-            </a>(JavaLand, Brühl, März 2019)
+            </a>{" "}
+            (JavaLand, Brühl, März 2019)
           </li>
 
           <li>
