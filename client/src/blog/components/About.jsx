@@ -56,6 +56,12 @@ export default function About({ flickrImages }) {
             (OOSE Abendveranstaltung, Hamburg, Januar 2019)
           </li>
           <li>
+            <a href="https://programm.javaland.eu/2019/#/scheduledEvent/569601" target="_blank">
+              GraphQL für Java-Entwickler
+            </a>(JavaLand, Brühl, März 2019)
+          </li>
+
+          <li>
             <a href="https://jax.de/serverside-enterprise-java/graphql-fuer-java-anwendungen/" target="_blank">
               {" "}
               GraphQL für Java Anwendungen

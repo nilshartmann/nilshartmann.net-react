@@ -70,6 +70,16 @@ class Layout extends React.Component {
                 <h1 className="Title">Talks und Workshops</h1>
                 <div className="Image">
                   <p>
+                    <b>JavaLand, Brühl, März 2019</b>
+                  </p>
+                  <p style={{ marginBottom: "0.5em" }}>
+                    <a className="ReadMore" href="https://programm.javaland.eu/2019/#/scheduledEvent/569601" target="_blank">
+                      GraphQL für Java-Entwickler
+                    </a>
+                  </p>
+                </div>
+                <div className="Image">
+                  <p>
                     <b>JAX, Mainz, Mai 2019</b>
                   </p>
                   <p style={{ marginBottom: "0.5em" }}>
