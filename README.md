@@ -1,8 +1,10 @@
-Simpleblog
-==========
+Deprecation warning
+===================
 
-This is my personal blog. It uses Hapi as a websever and React for rendering the pages
+This was my personal blog. It uses Hapi as a websever and React for rendering the pages
 both on server- and clientside. It stores its content as Markdown files in a regular Git repository.
+
+**This repository is not used any longer**, as I migrated all my content to a GatsbyJS-based homepage, that has its [own repository on](https://github.com/nilshartmann/nilshartmann.net)
 
 Server architecture
 ===================
